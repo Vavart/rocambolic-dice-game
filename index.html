@@ -23,7 +23,7 @@
 <body>
 
     <div class="pb-80">
-        <h1 class="mt-10 text-5xl font-bold text-center">
+        <h1 class="mt-10 text-3xl sm:text-5xl font-bold text-center">
             Rocambolic Dice Game
           </h1>
   
@@ -40,12 +40,12 @@
                 class="p-2 border rounded" 
                 type="number" 
                 name="maxPoints" 
-                placeholder="10"
+                placeholder="10 par défaut"
                 />
               </div>
             </div>
   
-            <div class="flex justify-center items-end gap-8">
+            <div class="flex sm:flex-row justify-center sm:items-end gap-8 flex-col items-center">
               <div class="flex flex-col">
                 <label htmlFor="psuedo">Pseudo</label>
                 <input 
@@ -92,7 +92,7 @@
           </div>
   
           <!-- Main game -->
-          <div class="grid grid-rows-1 grid-cols-6 mx-12 mt-5">
+          <div class="sm:grid sm:grid-rows-1 sm:grid-cols-6 mx-12 mt-5 flex sm:justify-between flex-wrap justify-center">
   
             <!-- Scores -->
             <div class="flex flex-col p-4 min-w-[200px] min-h-[300px] border border-zinc-800 rounded col-span-1">

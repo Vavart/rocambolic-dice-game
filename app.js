@@ -1,47 +1,3 @@
-// let joueurs = [];
-// let interval;
-
-// const form = document.querySelector('form')
-// form.addEventListener('submit', evt=>{
-//     evt.preventDefault();
-//     if(document.querySelector('.choix').value>100){
-//         alert("de 1 Ã  100 frÃ©ro");
-//     }else{
-//         joueurs.push({nom: document.querySelector(".nom").value, choix: document.querySelector('.choix').value});
-//         form.reset();
-//     }
-//     updateCard();
-// })
-
-// document.querySelector('.oui').addEventListener('click', ()=>{
-//     // document.querySelector('form').style.display = "none";
-//     interval = setInterval(chercherNbr, 1000);
-// })
-
-// function updateCard(){
-//     let liste = document.querySelector('#joueurs');
-//     let lesChiffres = document.querySelector('.LESCHIFFRES');
-//     lesChiffres.innerHTML = ""
-//     liste.innerHTML = "";
-//     joueurs.forEach(unJoueur=>{
-//         liste.textContent += unJoueur.nom+" ";
-//         lesChiffres.innerHTML += `<span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">${unJoueur.choix}</span>`
-//     })
-    
-// }
-
-// function chercherNbr(){
-//     let nbr = Math.floor(Math.random()*100);
-//     document.querySelector('#nbr').innerHTML = nbr;
-//     joueurs.forEach(joueur =>{
-//         if(joueur.choix == nbr){
-//             clearInterval(interval);
-//             alert(joueur.nom+" a gagnÃ© avec "+joueur.choix+" !");
-//         }
-//     })
-// }
-
-
 // Global variables
 let players = [];
 const nbMaxPointsInput = document.getElementsByName("maxPoints")[0];
@@ -158,7 +114,7 @@ btnAddPlayers.addEventListener("click", () =>  {
 function play() {
     gameInterval = setInterval(() => {
         
-        const randomNumber = Math.floor(Math.random() * 10);
+        const randomNumber = Math.floor(Math.random() * 100);
         contRandomNumber.innerText = randomNumber;
         
         players.forEach(player => {
@@ -168,7 +124,7 @@ function play() {
 
                 updateScoreDisplay();
 
-                let nbMaxPoints = 3;
+                let nbMaxPoints = 10;
                 if (nbMaxPointsInput.value > 0) nbMaxPoints = nbMaxPointsInput.value;
 
                 if (player.score == nbMaxPoints) {
