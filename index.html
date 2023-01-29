@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rocambolic Dice Game</title>
+
+    <link rel="apple-touch-icon" sizes="144x144" href="favicons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicons/favicon-16x16.png">
+    <link rel="manifest" href="favicons/site.webmanifest">
+    <link rel="mask-icon" href="/avicons/safari-pinned-tab.svg" color="#5bbad5">
+    <link rel="shortcut icon" href="favicons/favicon.ico">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="msapplication-config" content="favicons/browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
+
+    <link rel="stylesheet" href="dist/main.css">
+    <script src="app.js" defer></script>
+</head>
+
+<body>
+
+    <div class="pb-80">
+        <h1 class="mt-10 text-5xl font-bold text-center">
+            Rocambolic Dice Game
+          </h1>
+  
+        <!-- Configuration -->
+        <div class="mt-10 flex flex-col gap-10">
+  
+          <h2 class="text-3xl text-center">Configuration</h2>
+          <div class="flex justify-center items-center flex-col gap-8">
+            
+            <div class="flex justify-center items-center gap-8">
+              <div class="flex flex-col">
+                <label htmlFor="rounds">Points pour gagner</label>
+                <input 
+                class="p-2 border rounded" 
+                type="number" 
+                name="maxPoints" 
+                placeholder="10"
+                />
+              </div>
+            </div>
+  
+            <div class="flex justify-center items-end gap-8">
+              <div class="flex flex-col">
+                <label htmlFor="psuedo">Pseudo</label>
+                <input 
+                class="p-2 border rounded" 
+                type="text" 
+                name="pseudo" 
+                placeholder="Tiob"
+                />
+              </div>
+              
+              <div class="flex flex-col">
+                <label htmlFor="numberChoosen">Nombre choisi</label>
+                <input 
+                class="p-2 border rounded" 
+                type="number" 
+                name="numberChoosen" 
+                placeholder="41"
+                />
+              </div>
+  
+              <div class="flex flex-col">
+                <button id="add-player-btn" 
+                class="px-5 py-2 border border-zinc-800 rounded hover:text-white hover:bg-zinc-800 transition">Ajouter</button>
+              </div>
+            </div>
+  
+          </div>
+  
+        </div>
+  
+        <!-- Play -->
+        <button class="block my-20 p-6 text-xl font-bold text-white w-max mx-auto border rounded bg-teal-500 hover:bg-teal-600" id="play">Jouer</button>
+  
+  
+        <!-- Game -->
+        <div class="flex flex-col">
+  
+          <div class="flex flex-col gap-10 mx-12">
+  
+            <!-- Players -->
+            <div class="flex justify-center p-4 border rounded border-zinc-800 gap-8" id="cont-players">
+                <!-- Players will be displayed here -->
+            </div>
+          </div>
+  
+          <!-- Main game -->
+          <div class="grid grid-rows-1 grid-cols-6 mx-12 mt-5">
+  
+            <!-- Scores -->
+            <div class="flex flex-col p-4 min-w-[200px] min-h-[300px] border border-zinc-800 rounded col-span-1">
+  
+              <div class="border-b border-zinc-800 text-center ">
+                <h3 class="text-md">Scores</h3>
+              </div>
+  
+              <div class="mt-5 flex flex-col gap-2" id="cont-scores">
+
+                <!-- Scores will be displayed here -->
+  
+              </div>
+  
+            </div>
+  
+  
+            <!-- Number -->
+            <div class="flex justify-center items-center col-span-5">
+              <span class="text-9xl text-zinc-800" id="cont-random-number">69</span>
+            </div>
+          </div>
+  
+        </div>
+  
+      </div>
+    
+</body>
+</html>
