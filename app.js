@@ -60,9 +60,10 @@ function updateScoreDisplay() {
 }
 
 // Add player
-const btnAddPlayers = document.querySelector("#add-player-btn");
-btnAddPlayers.addEventListener("click", () =>  {
+const btnAddForm = document.querySelector("form");
+btnAddForm.addEventListener("submit", (e) =>  {
 
+    e.preventDefault();
 
     if (pseudoInput.value == "" || numberChoosenInput.value.length == 0) {
         return; 
@@ -138,6 +139,7 @@ function play() {
 }
 
 playBtn.addEventListener("click", play);
+
 
 
 

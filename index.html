@@ -45,32 +45,40 @@
               </div>
             </div>
   
-            <div class="flex sm:flex-row justify-center sm:items-end gap-8 flex-col items-center">
-              <div class="flex flex-col">
-                <label htmlFor="psuedo">Pseudo</label>
-                <input 
-                class="p-2 border rounded" 
-                type="text" 
-                name="pseudo" 
-                placeholder="Tiob"
-                />
-              </div>
-              
-              <div class="flex flex-col">
-                <label htmlFor="numberChoosen">Nombre choisi</label>
-                <input 
-                class="p-2 border rounded" 
-                type="number" 
-                name="numberChoosen" 
-                placeholder="41"
-                />
-              </div>
-  
-              <div class="flex flex-col">
-                <button id="add-player-btn" 
-                class="px-5 py-2 border border-zinc-800 rounded hover:text-white hover:bg-zinc-800 transition">Ajouter</button>
-              </div>
-            </div>
+            <form class="flex sm:flex-row justify-center sm:items-end gap-8 flex-col items-center">
+
+                <div class="flex flex-col">
+                  <label htmlFor="psuedo">Pseudo</label>
+                  <input 
+                  class="p-2 border rounded" 
+                  type="text" 
+                  name="pseudo" 
+                  placeholder="Tiob"
+                  required
+
+                  />
+                </div>
+                
+                <div class="flex flex-col">
+                  <label htmlFor="numberChoosen">Nombre choisi</label>
+                  <input 
+                  class="p-2 border rounded" 
+                  type="number" 
+                  name="numberChoosen" 
+                  placeholder="41"
+                  required
+                  min="0"
+                  max="100"
+
+                  />
+                </div>
+    
+                <div class="flex flex-col">
+                  <button id="add-player-btn" 
+                  class="px-5 py-2 border border-zinc-800 rounded hover:text-white hover:bg-zinc-800 transition">Ajouter</button>
+                </div>
+
+            </form>
   
           </div>
   
